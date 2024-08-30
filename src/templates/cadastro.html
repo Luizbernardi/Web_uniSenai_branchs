@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/src/css/style.css">
 </head>
 
-<body class="flex flex-col min-h-screen">
+<body class="flex flex-col h-screen overflow-hidden">
     <header class="bg-gray-200 w-full">
         <nav class="flex items-center justify-between w-full">
             <a href="index.html">
@@ -31,9 +31,103 @@
         </nav>
     </header>
     <div class="w-full flex-grow flex items-center justify-center">
-        <div class="w-[500px] h-[500px] bg-gray-200 flex items-center justify-center rounded-lg ">
+        <div class="grid grid-cols-3 items-center w-full">
+            <div class="bg-blue-500  w-full h-full flex justify-center items-end ">
+                <img class="max-h-[600px] " src="/public/img/12518388-removebg-preview.png" alt="um estudante segurando um livro sorrindo
+                !">
+            </div>
+            <div class="w-full max-w-2xl h-full bg-gray-200 p-4">
+                <div class="flex justify-center">
+                    <img class="h-60" src="/public/img/3413591.png" alt="imagem de um usuario lendo um jornal">
+                </div>
+                <form class="grid grid-cols-2 gap-4 p-4">
+                    <div class="space-y-2 w-full">
+                        <p class=" text-xl font-bold gap-2">Novo cadastro</p>
+                        <label class="input input-bordered flex items-center gap-2 custom-label">
+                            <input placeholder="Nome" type="text" class="grow" required />
+                        </label>
+                        <label class="input input-bordered flex items-center gap-2 custom-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                class="h-4 w-4 ">
+                                <path
+                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
+                            </svg>
+                            <input type="text" class="grow" placeholder="Username" required />
+                        </label>
+                        <label class="input input-bordered flex items-center gap-2 custom-label">
+                            <input placeholder="Senha" type="password" class="grow" required />
+                        </label>
+                        <label class="input input-bordered flex items-center gap-2 custom-label">
+                            <input placeholder="Confirmar Senha" type="password" class="grow" required />
+                        </label>
+                        <label class="flex items-center gap-2 custom-label w-full">
+                            <select class="select select-bordered w-full custom-select" required>
+                                <option disabled selected>Gênero</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                                <option value="nao-binario">Não-binário</option>
+                                <option value="outro">Outro</option>
+                                <option value="prefiro-nao-dizer">Prefiro não dizer</option>
+                            </select>
+                        </label>
+                        <label class="input input-bordered flex items-center gap-2 custom-label">
+                            <input placeholder="Cpf" type="text" id="cpf" name="cpf" maxlength="14"
+                                oninput="formatCPF(this)" required>
+                        </label>
+                        <label class="input input-bordered flex items-center gap-2 custom-label ">
+                            <input type="date" id="DataNascimento" name="DataNascimento" required>
+                        </Label>
+                        <div class="flex justify-center space-x-4 mt-8">
+                            <button class="bg-blue-500 px-6 py-2 rounded-md text-white   font-bold "
+                                type="submit">Entrar</button>
+                        </div>
+                    </div>
+                    <div class="space-y-2 space-x-2 mt-[36.25px]">
+                        <label for="formacao"
+                            class="mx-2 mr-auto input input-bordered flex items-center gap-2 custom-label">
+                            <input type="text" class="grow" placeholder="Formação" required />
+                        </label>
+                        <label class="input input-bordered flex items-center gap-2 custom-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                class="h-4 w-4 ">
+                                <path
+                                    d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
+                                <path
+                                    d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
+                            </svg>
+                            <input type="text" class="grow" placeholder="Email" required />
+                        </label>
+                        <label for="cep" class="input input-bordered flex items-center gap-2 custom-label">
+                            <input type="text" id="cep" placeholder="Cep" name="cep" maxlength="8" pattern="\d{8}"
+                                oninput="formatCep(this)" required>
+                        </label>
+                        <label for="cidade" class="input input-bordered flex items-center gap-2 custom-label">
+                            <input type="text" placeholder="Cidade" id="cidade" name="cidade" maxlength="50" required>
+                        </label>
+                        <label for="bairro" class="input input-bordered flex items-center gap-2 custom-label">
+                            <input type="text" placeholder="Bairro" id="bairro" name="bairro" maxlength="50" required>
+                        </label>
+                        <label for="numero" class="input input-bordered flex items-center gap-2 custom-label">
+                            <input type="text" placeholder="Número" id="numero" name="numero" maxlength="10" required>
+                        </label>
+                        <label for="complemento" class="input input-bordered flex items-center gap-2 custom-label">
+                            <input type="text" placeholder="Complemento" id="complemento" name="complemento"
+                                maxlength="50">
+                        </label>
+                        <div class="flex justify-center space-x-4 mt-8">
+                            <button class="bg-red-400 px-6 py-2 rounded-md text-white font-bold"
+                                type="button">Voltar</button></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="bg-red-400 w-full h-full flex justify-center items-end">
+                <img src="/public/img/png-transparent-student-diploma-college-education-course-student-woman-carrying-books-while-smiling-people-university-student-png-removebg-preview (1).png"
+                    alt="estudante segurando livros">
 
+            </div>
         </div>
+
     </div>
     <footer class="footer footer-center bg-gray-200 text-base-content p-4 w-full">
         <aside>
