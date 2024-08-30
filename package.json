@@ -1,0 +1,12 @@
+{
+  "name": "web_unisenai_branchs",
+  "version": "1.0.0",
+  "description": "Atividade Branchs Desenvolvimento Web",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
