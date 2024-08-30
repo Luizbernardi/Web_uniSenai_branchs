@@ -1,24 +1,54 @@
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/src/css/style.css">
 </head>
-<body>
-    <div>
-        <h1> Olá, seja bem vindo.</h1>
-        <h2> Nos da<b>UniSenai</b> agradeçemos a sua visita e gostariamos de poder aprsentar nossos cursos que mudarm sua vida e fututo.</h2>
-    </div>
 
-    <div>
-        <h2>Aproveite nossos cursos profissionalizantes, tecnicos, tecnologos e graduação com garantia MEC com nota em 4.5 de 5. </h2>
-    </div>
-    <img src="../../public/img/imagem.jpg"/>
-
-
+<body class="flex flex-col h-screen overflow-hidden">
+    <header class="bg-gray-200 w-full">
+        <nav class="flex items-center justify-between w-full">
+            <a href="index.html">
+                <img class="h-24" src="/src/img/marca-1.png" alt="Logo Senai">
+            </a>
+            <ul class="menu menu-horizontal lg:menu-horizontal rounded-box">
+                <li>
+                    <a class="text-xl" href="login.html">Login</a>
+                </li>
+                <li>
+                    <a class="text-xl" href="cadastro.html">Cadastro</a>
+                </li>
+                <li>
+                    <a class="text-xl" href="tabela.html">Tabela</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="flex-grow">
+        <div class="p-4">
+            <div>
+                <h1>Olá, seja bem vindo.</h1>
+                <h2>Nos da <b>UniSenai</b> agradecemos a sua visita e gostaríamos de poder apresentar nossos cursos que
+                    mudarão sua vida e futuro.</h2>
+            </div>
+            <div>
+                <h2>Aproveite nossos cursos profissionalizantes, técnicos, tecnólogos e graduação com garantia MEC com
+                    nota
+                    em 4.5 de 5.</h2>
+            </div>
+            <img src="../../public/img/imagem.jpg" alt="Imagem de cursos" />
+        </div>
+    </main>
+    <footer class="footer footer-center bg-gray-200 text-base-content p-4 w-full">
+        <aside>
+            <p>&copy; 2024 - Luiz Bernardi, Bruno Meredyk, João Ferreira, Rafael Barbato</p>
+        </aside>
+    </footer>
 </body>
+
 </html>
