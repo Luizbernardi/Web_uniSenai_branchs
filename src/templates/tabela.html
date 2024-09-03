@@ -1,113 +1,171 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="/src/css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Table</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="/src/css/style.css">
-</head>
+  <body class="flex flex-col h-screen overflow-hidden bg-white">
+    <header class="bg-gray-200 w-full">
+      <nav class="flex items-center justify-between w-full">
+        <a href="index.html">
+          <img
+            class="h-24"
+            src="/Web_uniSenai_branchs/src/img/marca-1.png"
+            alt="Logo Senai"
+          />
+        </a>
+        <ul class="menu menu-horizontal lg:menu-horizontal rounded-box">
+          <li class>
+            <a class="text-xl" href="login.html"> Login</a>
+          </li>
+          <li>
+            <a class="text-xl" href="cadastro.html">Cadastro</a>
+          </li>
+          <li>
+            <a class="text-xl" href="tabela.html">Tabela</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="flex-grow">
+      <div>
+        <h1 class="text-sky-400 text-6xl">Desempenho da Classe</h1>
+        <p class="text-black text-2xl">
+          Confira o desempenho dos alunos de Ánalise e Desenvolvimento de
+          Sistemas<br />
+          Disciplina: Fundamentos de Segurança da Informação<br />
+          1º Semestre:
+        </p>
+      </div>
 
-<body class="flex flex-col h-screen overflow-hidden">
-  <header class="bg-gray-200 w-full">
-    <nav class="flex items-center justify-between w-full">
-      <a href="index.html">
-        <img class="h-24" src="/src/img/marca-1.png" alt="Logo Senai">
-      </a>
-      <ul class="menu menu-horizontal lg:menu-horizontal rounded-box">
-        <li class>
-          <a class="text-xl" href="login.html">
-            Login</a>
-        </li>
-        <li>
-          <a class="text-xl" href="cadastro.html">Cadastro</a>
-        </li>
-        <li>
-          <a class="text-xl" href="tabela.html">Tabela</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <div class="flex-grow">
-    <div class="bg-white">
-      <h1 class="text-sky-400 text-6xl">Desempenho da Classe</h1>
-      <p class="text-black text-2xl">Confira o desempenho dos alunos de Ánalise e Desenvolvimento de Sistemas<br>
-        Disciplina: Fundamentos de Segurança da Informação<br>
-        1º Semestre:</p>
+      <div class="overflow-x-auto">
+        <table class="table table-pin-rows table-pin-cols">
+          <!-- head -->
+          <thead>
+            <tr class="bg-white font-bold text-black">
+              <th class="bg-white"></th>
+              <th class="bg-white">Nome</th>
+              <th class="bg-white">Disciplina</th>
+              <th class="bg-white">Nota</th>
+              <th class="bg-white">Frequência</th>
+              <th class="bg-white">Situação</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white">
+            <!-- row 1 -->
+            <tr class="bg-base-200 bg-white">
+              <th class="bg-white">1</th>
+              <td class="bg-white">João da Silva</td>
+              <td class="bg-white">Fundamentos de Segurança da Informação</td>
+              <td class="bg-white">8.5</td>
+              <td class="bg-white">90%</td>
+              <td class="bg-white">Aprovado</td>
+            </tr>
+            <!-- row 2 -->
+            <tr>
+              <th class="bg-blue-400 text-black font-bold">2</th>
+              <td class="bg-blue-400 text-black font-bold">Maria de Araújo</td>
+              <td class="bg-blue-400 text-black font-bold">
+                Fundamentos de Segurança da Informação
+              </td>
+              <td class="bg-blue-400 text-black font-bold">9.0</td>
+              <td class="bg-blue-400 text-black font-bold">95%</td>
+              <td class="bg-blue-400 text-black font-bold">Aprovado</td>
+            </tr>
+            <!-- row 3 -->
+            <tr>
+              <th class="bg-white">3</th>
+              <td>Fundamentos de Segurança da Informação</td>
+              <td>7.4</td>
+              <td>72%</td>
+              <td>Reprovado</td>
+            </tr>
+            <!-- row 4 -->
+            <tr>
+              <th class="bg-white">4</th>
+              <td>Julia Soares</td>
+              <td>Fundamentos de Segurança da Informação</td>
+              <td>4.1</td>
+              <td>85%</td>
+              <td>Reprovado</td>
+            </tr>
+            <!-- row 5 -->
+            <tr>
+              <th class="bg-white">5</th>
+              <td>Lucas Pereira de Souza</td>
+              <td>Fundamentos de Segurança da Informação</td>
+              <td>9.5</td>
+              <td>100%</td>
+              <td>Aprovado</td>
+            </tr>
+            <!-- row 6 -->
+            <tr>
+              <th class="bg-white">6</th>
+              <td>Marcos Aurelio de Almeida</td>
+              <td>Fundamentos de Segurança da Informação</td>
+              <td>7.3</td>
+              <td>88%</td>
+              <td>Aprovado</td>
+            </tr>
+            <!-- row 7 -->
+            <tr>
+              <th class="bg-white">7</th>
+              <td>Antonio Amaral</td>
+              <td>Fundamentos de Segurança da Informação</td>
+              <td>8.1</td>
+              <td>92%</td>
+              <td>Aprovado</td>
+            </tr>
+            <!-- row 8 -->
+            <tr>
+              <th class="bg-white">8</th>
+              <td>João da Silva de Souza</td>
+              <td>Fundamentos de Segurança da Informação</td>
+              <td>7.3</td>
+              <td>81%</td>
+              <td>Aprovado</td>
+            </tr>
+            <!-- row 9 -->
+            <tr>
+              <th class="bg-white">9</th>
+              <td>Maria Eduarda Saraiva</td>
+              <td>Fundamentos de Segurança da Informação</td>
+              <td>8.7</td>
+              <td>83%</td>
+              <td>Aprovado</td>
+            </tr>
+            <!-- row 10 -->
+            <tr>
+              <th class="bg-white">10</th>
+              <td>Rafaela Machado de Assis</td>
+              <td>Fundamentos de Segurança da Informação</td>
+              <td>2.1</td>
+              <td>59%</td>
+              <td>Reprovado</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
-    <div class="overflow-x-auto">
-      <table class="table table-pin-rows table-pin-cols bg-white">
-        <!-- head -->
-        <thead class="bg-white">
-          <tr class="bg-white">
-            <th></th>
-            <th>Nome</th>
-            <th>Disciplina</th>
-            <th>Nota</th>
-            <th>Frequência</th>
-            <th>Situação</th>
-          </tr>
-        </thead>
-        <tbody class="bg-white">
-          <!-- row 1 -->
-          <tr class="bg-base-200 bg-white">
-            <th>1</th>
-            <td>João da Silva</td>
-            <td>Fundamentos de Segurança da Informação</td>
-            <td>8.5</td>
-            <td>90%</td>
-            <td>Aprovado</td>
-          </tr>
-          <!-- row 2 -->
-          <tr>
-            <th>2</th>
-            <td>Maria de Araújo</td>
-            <td>Fundamentos de Segurança da Informação</td>
-            <td>9.0</td>
-            <td>95%</td>
-            <td>Aprovado</td>
-          </tr>
-          <!-- row 3 -->
-          <tr>
-            <th>3</th>
-            <td>Carlos de Jesus</td>
-            <td>Fundamentos de Segurança da Informação</td>
-            <td>7.5</td>
-            <td>72%</td>
-            <td>Reprovado</td>
-          </tr>
-          <!-- row 4 -->
-          <tr>
-            <th>4</th>
-            <td>Julia Soares</td>
-            <td>Fundamentos de Segurança da Informação</td>
-            <td>4.1</td>
-            <td>85%</td>
-            <td>Reprovado</td>
-          </tr>
-          <!-- row 5 -->
-          <tr>
-            <th>5</th>
-            <td>Lucas Pereira de Souza</td>
-            <td>Fundamentos de Segurança da Informação</td>
-            <td>9.5</td>
-            <td>100%</td>
-            <td>Aprovado</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <footer class="footer footer-center bg-gray-200 text-base-content p-4 w-full">
-    <aside>
-      <p>Copyright © 2024 - Luiz Bernardi Bruno Meredyk João Ferreira Rafael Barbato</p>
-    </aside>
-  </footer>
-
-</body>
-
+    <footer
+      class="footer footer-center bg-gray-200 text-base-content p-4 w-full"
+    >
+      <aside>
+        <p>
+          Copyright © 2024 - Luiz Bernardi Bruno Meredyk João Ferreira Rafael
+          Barbato
+        </p>
+      </aside>
+    </footer>
+  </body>
 </html>
